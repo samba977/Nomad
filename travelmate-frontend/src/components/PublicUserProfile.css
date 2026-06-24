@@ -1,0 +1,301 @@
+/* === Main Profile Container === */
+.public-profile-card.full-profile-container {
+  background: #f4f3e6;
+  border-radius: 28px;
+  padding: 40px;
+  max-width: 980px;
+  margin: 60px auto;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+  color: #1a1a1a;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.public-profile-card.full-profile-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* === Left Column: Avatar, Name, Chat === */
+.profile-left {
+  flex: 1 1 280px;
+  text-align: center;
+  padding: 20px;
+  border-right: 2px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.profile-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #00a8a8;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+.profile-avatar:hover { transform: scale(1.05); }
+.profile-name {
+  background-color: #00a8a8;
+  color: white;
+  font-weight: 700;
+  padding: 8px 22px;
+  border-radius: 22px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* Call-to-action stack for Chat + Report */
+.cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 260px;
+}
+
+/* === Buttons === */
+.chat-button,
+.report-button {
+  width: 100%;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Chat (filled) */
+.chat-button {
+  margin-top: 12px;
+  background-color: #00a8a8;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 207, 207, 0.25);
+}
+.chat-button:hover {
+  background-color: #00a8a8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 176, 176, 0.28);
+}
+
+/* Report (outline, same teal) */
+.report-button {
+  background: transparent;
+  color: #00a8a8;
+  border: 2px solid #00cfcf;
+}
+.report-button:hover {
+  background: rgba(0, 207, 207, 0.08);
+  transform: translateY(-1px);
+}
+
+/* === Right Column: Details === */
+.profile-right { flex: 2 1 500px; padding: 4px; }
+.profile-details p {
+  margin: 6px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.profile-details p span { font-weight: 700; color: #111; }
+
+/* === Interests === */
+.interests-label {
+  margin-top: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 10px;
+}
+.interest-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.interest-badges span {
+  background-color: #00a8a8;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: 0 2px 6px rgba(0, 207, 207, 0.2);
+}
+
+/* === Sections === */
+.public-section { margin-top: 40px; }
+.public-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  border-left: 4px solid #00a8a8;
+  padding-left: 12px;
+  margin-bottom: 14px;
+}
+.public-section p { font-size: 14px; color: #444; padding-left: 12px; }
+
+/* === Cards === */
+.public-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+.public-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #1a1a1a;
+}
+.public-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+.public-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #000;
+  text-transform: capitalize;
+}
+.public-card p { font-size: 14px; margin-bottom: 8px; line-height: 1.6; color: #222; }
+.public-card small { font-size: 12px; color: #666; }
+.public-card a {
+  color: #00a8a8;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+.public-card a:hover { color: #007878; }
+
+/* === Vertical snap scroller === */
+.snap-viewport {
+  --card-h: 180px;
+  max-height: var(--card-h);
+  overflow-y: auto;
+  padding-right: 6px;
+  display: grid;
+  gap: 16px;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.snap-card {
+  scroll-snap-align: start;
+  min-height: var(--card-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.snap-viewport::-webkit-scrollbar { width: 8px; }
+.snap-viewport::-webkit-scrollbar-thumb { border-radius: 8px; background: rgba(0, 0, 0, 0.15); }
+.snap-viewport::-webkit-scrollbar-track { background: transparent; }
+
+/* === Report Modal (using existing palette only) === */
+.report-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.report-modal {
+  width: min(560px, 92%);
+  background: white; /* same as cards */
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  padding: 20px 22px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.report-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.report-header h3 { margin: 0; color: #111; }
+.close-btn { border: none; background: transparent; font-size: 22px; cursor: pointer; color: #111; }
+
+.report-form label {
+  display: block; margin: 12px 0; color: #111; font-weight: 600;
+}
+.report-form select,
+.report-form textarea,
+.report-form input[type="url"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: white;
+  color: #1a1a1a;
+  outline: none;
+}
+.report-form textarea { resize: vertical; }
+
+.evidence-group { margin-top: 6px; }
+.evidence-header {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;
+  color: #111; font-weight: 600;
+}
+.add-ev, .remove-ev {
+  border: 2px solid #00cfcf;
+  background: transparent;
+  color: #00a8a8;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.add-ev:hover, .remove-ev:hover { background: rgba(0, 207, 207, 0.08); }
+.evidence-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+
+.submit-btn {
+  margin-top: 10px; width: 100%;
+  background: #00a8a8; color: white;
+  border: none; cursor: pointer;
+  padding: 12px 14px; border-radius: 12px;
+  font-weight: 700; letter-spacing: .3px;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.submit-btn:hover { background: #00b0b0; transform: translateY(-1px); }
+.submit-btn:disabled { opacity: .7; cursor: not-allowed; }
+
+/* === Responsive Enhancements === */
+@media (max-width: 768px) {
+  .public-profile-card.full-profile-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+    margin: 40px 16px;
+  }
+  .profile-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .profile-avatar { width: 95px; height: 95px; }
+  .profile-name { font-size: 14px; padding: 6px 16px; }
+  .chat-button { font-size: 13px; padding: 10px 22px; }
+  .public-card { padding: 16px; border-radius: 14px; }
+  .snap-viewport { --card-h: 160px; }
+}
+@media (max-width: 480px) {
+  .public-profile-card.full-profile-container { padding: 16px; }
+  .profile-avatar { width: 80px; height: 80px; }
+  .interest-badges { justify-content: center; }
+  .interest-badges span { padding: 5px 10px; font-size: 11px; }
+  .public-section h2 { font-size: 16px; }
+}

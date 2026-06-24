@@ -1,0 +1,5 @@
+# (optional) proxy your API — replace with your live API URL
+/api/*  https://YOUR-LIVE-BACKEND.com/:splat  200
+
+# SPA fallback
+/*      /index.html                              200

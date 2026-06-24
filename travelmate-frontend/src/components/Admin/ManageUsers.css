@@ -1,0 +1,50 @@
+.manage-users {
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #111; /* Makes all text in this section black */
+}
+
+.manage-users h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* Heading black */
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #111; /* Table text black */
+}
+
+.user-table th, .user-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #111; /* Table header and cell text black */
+}
+
+.user-table th {
+  background: #e8e4d8;
+  font-weight: 600;
+  color: #111; /* Table header text black */
+}
+
+.delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}

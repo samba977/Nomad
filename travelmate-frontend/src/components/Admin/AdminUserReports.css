@@ -1,0 +1,232 @@
+/* ===============================
+   Admin: User Reports (like Manage Users)
+   =============================== */
+
+.user-reports {
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #111; /* section text black */
+}
+
+.user-reports h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* match your heading color choice */
+}
+
+/* Toolbar (search, filters, bulk actions) */
+.reports-toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.reports-toolbar .search-input,
+.reports-toolbar .filter-select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  outline: none;
+}
+
+.reports-toolbar .bulk-btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.reports-toolbar .bulk-btn:hover {
+  background: #f5f5f5;
+}
+.reports-toolbar .bulk-danger {
+  border: none;
+  background: #e53935;
+  color: #fff;
+}
+.reports-toolbar .bulk-danger:hover {
+  background: #c62828;
+}
+
+/* Table */
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  color: #111; /* table text black */
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #111;
+  vertical-align: top;
+}
+
+.reports-table th {
+  background: #e8e4d8;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Make the first column (checkbox or ID) narrower if you use it */
+.reports-table th.col-narrow,
+.reports-table td.col-narrow {
+  width: 48px;
+}
+
+/* Status pill (subtle, readable; uses a colored left border for quick scan) */
+.status-pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  color: #111;
+  font-weight: 600;
+  line-height: 1;
+}
+.status-pill.open { border-left: 4px solid #e53935; }     /* open */
+.status-pill.reviewing { border-left: 4px solid #1e88e5; } /* reviewing */
+.status-pill.resolved { border-left: 4px solid #2e7d32; }  /* resolved */
+.status-pill.rejected { border-left: 4px solid #6d4c41; }  /* rejected */
+
+/* Evidence link list inside a cell */
+.evidence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.evidence-list a {
+  color: #111;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* Notes/content truncation helper */
+.clip {
+  max-width: 520px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.view-btn {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.view-btn:hover { background: #f5f5f5; }
+
+.resolve-btn {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+.resolve-btn:hover { background: #1b5e20; }
+
+.reject-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.reject-btn:hover { background: #c62828; }
+
+/* Reuse your delete style for permanent delete if needed */
+.delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.delete-btn:hover { background: #c62828; }
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 16px;
+  color: #111;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+.pagination button {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.pagination button:hover { background: #f5f5f5; }
+.pagination .active {
+  background: #e8e4d8;
+  border-color: #e8e4d8;
+}
+
+/* Scroll wrapper (if table overflows) */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 840px) {
+  .clip { max-width: 260px; }
+}
+@media (max-width: 640px) {
+  .reports-toolbar { gap: 8px; }
+  .reports-toolbar .search-input,
+  .reports-toolbar .filter-select { flex: 1; min-width: 140px; }
+  .actions { gap: 6px; }
+}

@@ -1,0 +1,81 @@
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Existing grid of links */
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.admin-card {
+  background: white;
+  padding: 28px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.admin-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.admin-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* 🔢 NEW: Summary cards for counts */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 20px auto 40px;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.dashboard-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.dashboard-card p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00a8a8;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+}

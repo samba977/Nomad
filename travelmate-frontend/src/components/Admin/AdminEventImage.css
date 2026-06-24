@@ -1,0 +1,193 @@
+/* === Page Wrapper === */
+.admin-event-image-page {
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #111;
+}
+
+/* === Title (centered, same as Destinations) === */
+.admin-event-image-page h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* === Centered Upload Button (same class as Destinations) === */
+.add-destination-topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* === Button (identical) === */
+.add-destination-btn {
+  background: #00a8a8;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: background 0.2s;
+}
+.add-destination-btn:hover { background: #009191; }
+
+/* === Modal Overlay (same) === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+}
+
+/* === Modal Form (same) === */
+.destination-modal-form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 28px 18px 28px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  min-width: 320px;
+  max-width: 98vw;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  animation: popModal 0.19s cubic-bezier(.56,2.03,.46,.76);
+}
+@keyframes popModal {
+  from { transform: scale(0.9); opacity: 0.7; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.destination-modal-form h3 {
+  color: #00a8a8;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.destination-modal-form input,
+.destination-modal-form select,
+.destination-modal-form input[type="file"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #111;
+  font-size: 1rem;
+  background: #f9f9ff;
+}
+
+/* === Modal Buttons (same) === */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+.submit-btn {
+  background: #00a8a8;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:hover { background: #007f7f; }
+.cancel-btn {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cancel-btn:hover { background: #f5f5f5; }
+
+/* === Image Card List (same) === */
+.destination-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* === Individual Image Card (same) === */
+.destination-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+.destination-item img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.destination-item h4 {
+  margin: 0;
+  color: #111;
+  font-size: 16px;
+}
+.destination-item p {
+  font-size: 13px;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* === Delete Button (same) === */
+.delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: auto;
+  transition: background 0.2s;
+}
+.delete-btn:hover { background: #c62828; }
+
+/* === Mobile (same behavior) === */
+@media (max-width: 600px) {
+  .add-destination-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .destination-modal-form {
+    width: 98vw;
+    min-width: unset;
+    padding: 20px 8px 10px 8px;
+  }
+
+  .destination-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .destination-item img {
+    width: 98vw;
+    max-width: 340px;
+    height: 30vw;
+    min-height: 70px;
+  }
+}

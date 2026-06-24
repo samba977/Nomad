@@ -1,0 +1,136 @@
+/* =========================
+   Admin: Reported Messages
+   ========================= */
+
+.view-reports {
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #111; /* section text black */
+}
+
+.view-reports h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* match other admin headings */
+}
+
+/* Toolbar (search) */
+.reports-toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  outline: none;
+}
+
+/* Scroll wrapper (if table overflows) */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table */
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  color: #111; /* table text black */
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #111;
+  vertical-align: top;
+}
+
+.reports-table th {
+  background: #e8e4d8;
+  font-weight: 600;
+  color: #111;
+}
+
+/* narrow index column */
+.reports-table th.col-narrow,
+.reports-table td.col-narrow {
+  width: 48px;
+}
+
+/* text clipping helper for long strings */
+.clip {
+  max-width: 520px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Actions */
+.delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.delete-btn:hover {
+  background: #c62828;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 16px;
+  color: #111;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* Pagination (Prev / 1.. / Next) — matches your screenshot */
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+.pagination button {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 12px; /* rounded like the image */
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.pagination button:hover {
+  background: #f5f5f5;
+}
+.pagination .active {
+  background: #e8e4d8;  /* the beige center pill */
+  border-color: #e8e4d8;
+}
+
+/* Responsive tweaks */
+@media (max-width: 840px) {
+  .clip { max-width: 260px; }
+}

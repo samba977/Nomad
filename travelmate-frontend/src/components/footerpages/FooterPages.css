@@ -1,0 +1,67 @@
+.footer-page-container {
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 40px 20px;
+  background: rgba(253, 246, 233, 0.85); /* soft #fdf6e9 with transparency */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+.footer-page-title {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.footer-page-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* === Contact Info Styles === */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  color: #00a8a8;
+  font-size: 1.4rem;
+}
+
+/* === FAQ Section Styling (if used in other footer pages) === */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  margin-top: 5px;
+}

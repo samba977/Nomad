@@ -1,0 +1,188 @@
+/* Container centers the form */
+.profile-creation-container {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 80vh;
+  background: transparent; /* change as needed */
+}
+
+/* Main profile form */
+.profile-creation-form {
+  background-color: #f4f3e6;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+  color: black;
+}
+
+/* Form heading */
+.profile-creation-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Label styles */
+.profile-creation-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Input, textarea, file styles */
+.profile-creation-form textarea,
+.profile-creation-form input[type="tel"],
+.profile-creation-form input[type="file"],
+.profile-creation-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  resize: none;
+}
+
+/* Interest input wrapper: input + add button inline */
+.interest-input-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0px; /* suggestions will have their own margin */
+}
+
+.interest-input-wrapper input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.interest-input-wrapper button {
+  padding: 10px 16px;
+  background-color: #00a8a8;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.interest-input-wrapper button:hover {
+  background-color: #008c8c;
+}
+
+/* SUGGESTION BUBBLES styles */
+.suggested-interests-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 18px 0;
+}
+
+.interest-suggestion-bubble {
+  background: #e7e6f7;
+  color: #2300a2;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 7px 15px;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid #2300a2;
+  cursor: pointer;
+  outline: none;
+}
+
+.interest-suggestion-bubble:hover,
+.interest-suggestion-bubble:focus {
+  background: #2300a2;
+  color: #fff;
+}
+
+/* Container for selected interest boxes */
+.interests-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+/* Each interest box */
+.interest-box {
+  background-color: #00a8a8;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* Remove (x) button inside interest box */
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 2px;
+  margin: 0 0 0 2px;
+  user-select: none;
+}
+
+/* File input preview image */
+.profile-creation-form img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px auto 18px auto;
+  border: 2px solid #00a8a8;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* Submit button */
+.profile-creation-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #00a8a8;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.profile-creation-form button[type="submit"]:hover {
+  background-color: #008c8c;
+}
+
+/* Responsive: Make form look good on small screens */
+@media (max-width: 600px) {
+  .profile-creation-form {
+    padding: 16px;
+    border-radius: 10px;
+    max-width: 100%;
+  }
+  .profile-creation-container {
+    padding: 18px 4px;
+  }
+}

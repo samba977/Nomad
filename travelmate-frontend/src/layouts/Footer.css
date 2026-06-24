@@ -1,0 +1,58 @@
+/* === FOOTER === */
+.footer {
+  background: #fdf6e9;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  color: #000;
+  padding: 40px 40px 20px;
+  margin-top: 0;
+}
+.footer-content {
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  gap: 24px; max-width: 1200px; margin: 0 auto; text-align: left;
+}
+.footer-columns-group {
+  display: flex; justify-content: space-between; flex: 1;
+  gap: 24px; flex-wrap: wrap;
+}
+.footer-column { flex: 1; min-width: 160px; }
+.footer-column h3, .footer-column h4 {
+  font-weight: 700; margin-bottom: 8px; font-size: 16px;
+}
+.footer-column p { font-size: 13px; margin-bottom: 16px; }
+
+/* Only link columns get these styles */
+.footer-column.links a {
+  display: block; font-size: 13px; color: #1a1a1a; text-decoration: none;
+  margin-bottom: 6px; transition: color 0.3s;
+}
+.footer-column.links a:hover { color: #00b4d8; text-decoration: underline; }
+
+/* === FOOTER BOTTOM === */
+.footer-bottom {
+  border-top: 1px solid #ddd; margin-top: 30px; padding-top: 16px;
+  font-size: 12px; color: #333; display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer-link {
+  background: none; border: none; padding: 0; color: #1a1a1a;
+  cursor: pointer; font-size: 13px; text-decoration: underline; margin-bottom: 6px;
+  transition: color 0.3s;
+}
+.footer-link:hover { color: #00b4d8; }
+
+/* === SIGNIN BUTTON (footer CTA) === */
+.signin-button {
+  display: inline-flex !important;
+  align-items: center; gap: 8px; padding: 8px 20px;
+  border: 2px solid #1a1a1a; border-radius: 30px; font-weight: 600;
+  color: #1a1a1a; background: transparent; text-decoration: none; font-size: 13px;
+  margin-bottom: 10px; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+  width: auto !important; white-space: nowrap;
+}
+.signin-button:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+.signin-button .arrow-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #1a1a1a; color: #fff; width: 20px; height: 20px; font-size: 12px;
+  border-radius: 50%; line-height: 1;
+}
